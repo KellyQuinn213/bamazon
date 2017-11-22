@@ -43,7 +43,7 @@ function askCustomer() {
         name: "purchase",
         type: "list",
         message: "What would you like to purchase?",
-        choices: ["phone charger", "blender", "head phones", "blanket", "floor lamp", "dish soap", "notesbooks", "hair brush", "ligh bulb", "Macbook Pro"]
+        choices: ["phone charger", "blender", "head phones", "blanket", "floor lamp", "dish soap", "notesbooks", "hair brush", "light bulb", "Macbook Pro"]
       },
       {
         name: "quantity",
@@ -61,7 +61,7 @@ function askCustomer() {
     .then(function (answer) {
 
       connection.query(
-        "SELECT FROM * products WHERE ?",
+        "SELECT * FROM products WHERE ?",
         {
           product_name: answer.purchase
         },
